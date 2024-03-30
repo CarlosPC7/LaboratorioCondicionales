@@ -3,5 +3,15 @@
 let almacenarPuntuacion = 0;
 
 const muestraPuntuacion = () => {
-    document.getElementById("puntuacion")?.innerHTML
-}
+    const elementoPuntuacion = document.getElementById("puntuacion");
+
+    if(elementoPuntuacion) {
+        elementoPuntuacion.innerHTML = `${almacenarPuntuacion}`;
+    }
+};
+
+document.addEventListener("DOMContentLoaded", muestraPuntuacion);
+
+// 2. Pedir carta
+
+
