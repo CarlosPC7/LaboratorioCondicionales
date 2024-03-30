@@ -12,15 +12,27 @@ const muestraPuntuacion = () => {
 
 document.addEventListener("DOMContentLoaded", muestraPuntuacion);
 
-// 2. Pedir carta (crear numero aleatorio, funcion damecarta, invocarla)
+// 2. Pedir carta
 
-const cartaAlAzar = (min: number, max: number) => Math.floor (Math.random());
+const cartaAlAzar = (min: number, max: number) => Math.floor (Math.random()*(max - min + 1) + min);
 
 const cartaElegida: number = cartaAlAzar(1,10);
 
-console.log (cartaElegida);
-
 const NUMERO_SIETE: number = 7;
+
+const dameCarta =() => {
+    const elementoPuntuacion = document.getElementById("puntuacion");
+    const numeroPuntuacion = parseInt (elementoPuntuacion);
+    const numeroMasDos = cartaElegida + 2;
+
+    if(numeroPuntuacion => NUMERO_SIETE) {
+        console.log(numeroMasDos);
+    } else {console.log(cartaElegida);
+        }
+    };
+
+const botonCarta = document.getElementById("carta");
+botonCarta?.addEventListener("click", dameCarta);
 
 /*
 type Estados =
