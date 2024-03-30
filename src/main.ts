@@ -14,14 +14,13 @@ document.addEventListener("DOMContentLoaded", muestraPuntuacion);
 
 // 2. Pedir carta (crear numero aleatorio, funcion damecarta, invocarla)
 
-const cartaAlAzar = (min,max): number => Math.floor (Math.random());
+const cartaAlAzar = (min: number, max: number) => Math.floor (Math.random());
 
-const cartaElegida: number = const cartaAlAzar(1,10);
+const cartaElegida: number = cartaAlAzar(1,10);
 
 console.log (cartaElegida);
 
 const NUMERO_SIETE: number = 7;
-
 
 /*
 type Estados =
