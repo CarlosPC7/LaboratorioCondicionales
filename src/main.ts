@@ -1,3 +1,7 @@
-import "./style.css";
+// 1. Mostrar puntuación
 
-console.log("Hello Typescript!");
+let almacenarPuntuacion = 0;
+
+const muestraPuntuacion = () => {
+    document.getElementById("puntuacion")?.innerHTML
+}
