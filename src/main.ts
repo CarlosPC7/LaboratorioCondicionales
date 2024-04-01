@@ -21,11 +21,11 @@ const cartaElegida: number = cartaAlAzar(1,10);
 const NUMERO_SIETE: number = 7;
 
 const dameCarta =() => {
-    const elementoPuntuacion = document.getElementById("puntuacion");
+    const elementoPuntuacion = (document.getElementById("puntuacion") as HTMLInputElement).value;
     const numeroPuntuacion = parseInt (elementoPuntuacion);
     const numeroMasDos = cartaElegida + 2;
 
-    if(numeroPuntuacion => NUMERO_SIETE) {
+    if(numeroPuntuacion >= NUMERO_SIETE) {
         console.log(numeroMasDos);
     } else {console.log(cartaElegida);
         }
