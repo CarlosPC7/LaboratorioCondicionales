@@ -52,41 +52,47 @@ const mostrarCarta = (carta: number, estado: Estados) : void => {
     let imagen ="";
     switch (estado) {
         case "ES_NUM_1":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/1_as-copas.jpg`;
         break;
         case "ES_NUM_2":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/2_dos-copas.jpg`;
         break;
         case "ES_NUM_3":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/3_tres-copas.jpg`;
         break;
         case "ES_NUM_4":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/4_cuatro-copas.jpg`;
         break;
         case "ES_NUM_5":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/5_cinco-copas.jpg`;
         break;
         case "ES_NUM_6":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/6_seis-copas.jpg`;
         break;
         case "ES_NUM_7":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/7_siete-copas.jpg`;
         break;
         case "ES_NUM_10":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/10_sota-copas.jpg`;
         break;
         case "ES_NUM_11":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/11_caballo-copas.jpg`;
         break;
         case "ES_NUM_12":
-        mensaje = ``;
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/12_rey-copas.jpg`;
         break;
         default:
-        mensaje = "what";
+        imagen = "Sigue intentándolo";
         break;
         }
 }
 
+const elementoImagen = document.getElementById("imagenCarta") as HTMLImageElement;
+if (elementoImagen) {
+    elementoImagen.src = imagen;
+} else {
+    console.error("Elemento img no encontrado en el DOM");
+};
 
 
 /*
