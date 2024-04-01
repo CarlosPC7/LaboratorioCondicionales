@@ -12,7 +12,7 @@ const muestraPuntuacion = () => {
 
 document.addEventListener("DOMContentLoaded", muestraPuntuacion);
 
-// 2. Pedir carta
+// 2. Pedir carta (¿Al clicar el button no da carta elegida?)
 
 const cartaAlAzar = (min: number, max: number) => Math.floor (Math.random()*(max - min + 1) + min);
 
@@ -33,6 +33,61 @@ const dameCarta =() => {
 
 const botonCarta = document.getElementById("carta");
 botonCarta?.addEventListener("click", dameCarta);
+
+// 3. Mostrar carta
+
+type Estados =
+| "ES_NUM_1"
+| "ES_NUM_2"
+| "ES_NUM_3"
+| "ES_NUM_4"
+| "ES_NUM_5"
+| "ES_NUM_6"
+| "ES_NUM_7"
+| "ES_NUM_10"
+| "ES_NUM_11"
+| "ES_NUM_12";
+
+const mostrarCarta = (carta: number, estado: Estados) : void => {
+    let imagen ="";
+    switch (estado) {
+        case "ES_NUM_1":
+        mensaje = ``;
+        break;
+        case "ES_NUM_2":
+        mensaje = ``;
+        break;
+        case "ES_NUM_3":
+        mensaje = ``;
+        break;
+        case "ES_NUM_4":
+        mensaje = ``;
+        break;
+        case "ES_NUM_5":
+        mensaje = ``;
+        break;
+        case "ES_NUM_6":
+        mensaje = ``;
+        break;
+        case "ES_NUM_7":
+        mensaje = ``;
+        break;
+        case "ES_NUM_10":
+        mensaje = ``;
+        break;
+        case "ES_NUM_11":
+        mensaje = ``;
+        break;
+        case "ES_NUM_12":
+        mensaje = ``;
+        break;
+        default:
+        mensaje = "what";
+        break;
+        }
+}
+
+
 
 /*
 type Estados =
