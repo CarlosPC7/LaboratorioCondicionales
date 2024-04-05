@@ -46,7 +46,8 @@ type Estados =
 | "ES_NUM_7"
 | "ES_NUM_10"
 | "ES_NUM_11"
-| "ES_NUM_12";
+| "ES_NUM_12"
+| "GAME_OVER_PUNTOS";
 
 const mostrarCarta = (carta: number, estado: Estados) : void => {
     let imagen ="";
@@ -80,6 +81,9 @@ const mostrarCarta = (carta: number, estado: Estados) : void => {
         break;
         case "ES_NUM_12":
         imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/12_rey-copas.jpg`;
+        break;
+        case "GAME_OVER_PUNTOS":
+        imagen = "Has superado máxima puntuación";
         break;
         default:
         imagen = "Sigue intentándolo";
@@ -132,8 +136,82 @@ const pideCarta = (dameCarta: number) => {
     if(dameCarta === 12) {
         return "ES_NUM_12";
     }
+    if(hasSuperadoElNumeroDePuntos()) {
+        return "GAME_OVER_PUNTOS";
+    }
 };
 
+const handleCompruebaClick = () => {
+    let texto ="";
+    const inputElement = document.getElementById("numero");
+
+    if (inputElement && inputElement instanceof HTMLInputElement) {
+        texto = inputElement.value;
+    }
+
+    const estado: Estados = mostrarCarta (carta, estado);
+    pideCarta(dameCarta);
+    gestionarGameOver(estado);
+   };
+   
+   const botonComprobar = document.getElementById("carta");
+   botonComprobar?.addEventListener("click", handleCompruebaClick);
+
+
+// 4. Sumar Puntuación
+
+// 5. Game Over (¿orden con el resto?)
+
+const MAXIMO_PUNTOS = 7.5 ;
+let puntosAcumulados = 0 ;
+
+const hasSuperadoElNumeroDePuntos = () => {
+    puntosAcumulados >= MAXIMO_PUNTOS;
+}
+
+const gestionarGameOver = (estado: Estados) => {
+    if(estado === "GAME_OVER_PUNTOS") {
+        const elementoComprobar = document.getElementById("carta");
+        if (elementoComprobar && elementoComprobar instanceof HTMLButtonElement) {
+            elementoComprobar.disabled = true;
+        } else {
+            console.error ("gestionarGameOver: No se ha encontrado el elemento id con comprobar");
+        }
+    }
+};
+
+// 6. Me planto (¿return?, ¿switch e imagenes resto alternativas?)
+
+/*
+const MENOR_CUATRO = 1;
+const IGUAL_CINCO = 2;
+const SEIS_O_SIETE = 3;
+const IGUAL_SIETEYMEDIO = 4;
+
+const mostrarCarta2 = (carta: number, estado: Estados) : void => {
+    let mensaje ="";
+    switch (estado) {
+        case "MENOR_CUATRO":
+        mensaje = `Has sido muy conservador`;
+        break;
+        case "IGUAL_CINCO":
+        mensaje = `Te ha entrado el canguelo eh?`;
+        break;
+        case "SEIS_O_SIETE":
+        mensaje = `Casi casi...`;
+        break;
+        case "IGUAL_SIETEYMEDIO":
+        mensaje = `¡Lo has clavado! ¡Enhorabuena!`;
+        break;
+    }
+    const elementoImagen = document.getElementById("imagenCarta") as HTMLImageElement;
+    if (elementoImagen) {
+        elementoImagen.src = imagen;
+    } else {
+        console.error("Elemento img no encontrado en el DOM");
+    }
+};
+*/
 
 /*
 type Estados =
