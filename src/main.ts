@@ -25,7 +25,7 @@ const dameCarta =() => {
     const numeroPuntuacion = parseInt (elementoPuntuacion);
     const numeroMasDos = cartaElegida + 2;
 
-    if(numeroPuntuacion >= NUMERO_SIETE) {
+    if(numeroPuntuacion > NUMERO_SIETE) {
         console.log(numeroMasDos);
     } else {console.log(cartaElegida);
         }
@@ -34,7 +34,7 @@ const dameCarta =() => {
 const botonCarta = document.getElementById("carta");
 botonCarta?.addEventListener("click", dameCarta);
 
-// 3. Mostrar carta
+// 3. Mostrar carta (¿Como llamamos al final, handle?, ¿dameCarta: number?, ¿si saltamos numeros porque asignamos cartas?)
 
 type Estados =
 | "ES_NUM_1"
@@ -85,13 +85,53 @@ const mostrarCarta = (carta: number, estado: Estados) : void => {
         imagen = "Sigue intentándolo";
         break;
         }
-}
 
 const elementoImagen = document.getElementById("imagenCarta") as HTMLImageElement;
 if (elementoImagen) {
     elementoImagen.src = imagen;
 } else {
     console.error("Elemento img no encontrado en el DOM");
+}
+};
+
+const pideCarta = (dameCarta: number) => {
+
+    if(dameCarta === 1) {
+        return "ES_NUM_1";
+    }
+    if(dameCarta === 2) {
+        return "ES_NUM_2";
+    }
+    if(dameCarta === 3) {
+        return "ES_NUM_3";
+    }
+    if(dameCarta === 4) {
+        return "ES_NUM_4";
+    }
+    if(dameCarta === 5) {
+        return "ES_NUM_5";
+    }
+    if(dameCarta === 6) {
+        return "ES_NUM_6";
+    }
+    if(dameCarta === 7) {
+        return "ES_NUM_7";
+    }
+    if(dameCarta === 8) {
+        return "ES_NUM_8";
+    }
+    if(dameCarta === 9) {
+        return "ES_NUM_9";
+    }
+    if(dameCarta === 10) {
+        return "ES_NUM_10";
+    }
+    if(dameCarta === 11) {
+        return "ES_NUM_11";
+    }
+    if(dameCarta === 12) {
+        return "ES_NUM_12";
+    }
 };
 
 
