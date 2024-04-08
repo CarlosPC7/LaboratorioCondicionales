@@ -12,26 +12,26 @@ const muestraPuntuacion = () => {
 
 document.addEventListener("DOMContentLoaded", muestraPuntuacion);
 
-// 2. Pedir carta (instaceof distinto null.., no necesito ningun input para seleccionar carta, funcion aparte con return de carta elegida
+// 2. Pedir carta (instaceof, no necesito ningun input para seleccionar carta, funcion aparte con return de carta elegida
 
 const cartaAlAzar = (min: number, max: number) => Math.floor (Math.random()*(max - min + 1) + min);
 
-const NUMERO_SIETE: number = 7;
 
 const dameCarta =() => {
-    const elementoPuntuacion = (document.getElementById("puntuacion") as HTMLInputElement).value;
-    const numeroPuntuacion = parseInt (elementoPuntuacion);
     const cartaElegida: number = cartaAlAzar(1,10);
-    const numeroMasDos = cartaElegida + 2;
+    const NUMERO_SIETE: number = 7;
 
-    if(numeroPuntuacion > NUMERO_SIETE) {
-        console.log(numeroMasDos);
-    } else {console.log(cartaElegida);
-        }
+    if(cartaElegida > NUMERO_SIETE) {
+        return cartaElegida + 2;
+        } else {return cartaElegida}
     };
 
 const botonCarta = document.getElementById("carta");
-botonCarta?.addEventListener("click", dameCarta);
+
+if (botonCarta !== undefined && botonCarta !== null) {
+botonCarta.addEventListener("click", dameCarta);
+};
+
 /*
 // 3. Mostrar carta (¿Como llamamos al final, handle?, ¿dameCarta: number?, ¿si saltamos numeros porque asignamos cartas?)
 
