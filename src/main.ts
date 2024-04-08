@@ -37,7 +37,7 @@ if (botonCarta !== undefined && botonCarta !== null) {
 botonCarta.addEventListener("click", dameCarta);
 };
 
-/*
+
 // 3. Mostrar carta (¿Como llamamos al final, handle?, ¿dameCarta: number?, ¿si saltamos numeros porque asignamos cartas?)
 
 type Estados =
@@ -51,9 +51,10 @@ type Estados =
 | "ES_NUM_10"
 | "ES_NUM_11"
 | "ES_NUM_12"
+| "INVALID_CARD_NUMBER"
 | "GAME_OVER_PUNTOS";
 
-const mostrarCarta = (carta: number, estado: Estados) : void => {
+const mostrarCarta = (estado: Estados) : void => {
     let imagen ="";
     switch (estado) {
         case "ES_NUM_1":
@@ -94,54 +95,50 @@ const mostrarCarta = (carta: number, estado: Estados) : void => {
         break;
         }
 
-const elementoImagen = document.getElementById("imagenCarta") as HTMLImageElement;
-if (elementoImagen) {
+const elementoImagen = document.getElementById("imagenCarta");
+if (elementoImagen instanceof HTMLImageElement) {
     elementoImagen.src = imagen;
 } else {
     console.error("Elemento img no encontrado en el DOM");
 }
 };
 
-const pideCarta = (dameCarta: number) => {
+const pideCarta = (dameCarta: number): string => {
 
-    if(dameCarta === 1) {
+    switch (dameCarta) {
+        case 1:
+        console.log("ES_NUM_1");
         return "ES_NUM_1";
-    }
-    if(dameCarta === 2) {
+        case 2:
+        console.log("ES_NUM_2");
         return "ES_NUM_2";
-    }
-    if(dameCarta === 3) {
+        case 3:
+        console.log("ES_NUM_3");
         return "ES_NUM_3";
-    }
-    if(dameCarta === 4) {
+        case 4:
+        console.log("ES_NUM_4");
         return "ES_NUM_4";
-    }
-    if(dameCarta === 5) {
+        case 5:
+        console.log("ES_NUM_5");
         return "ES_NUM_5";
-    }
-    if(dameCarta === 6) {
+        case 6:
+        console.log("ES_NUM_6");
         return "ES_NUM_6";
-    }
-    if(dameCarta === 7) {
+        case 7:
+        console.log("ES_NUM_7");
         return "ES_NUM_7";
-    }
-    if(dameCarta === 8) {
-        return "ES_NUM_8";
-    }
-    if(dameCarta === 9) {
-        return "ES_NUM_9";
-    }
-    if(dameCarta === 10) {
+        case 10:
+        console.log("ES_NUM_10");
         return "ES_NUM_10";
-    }
-    if(dameCarta === 11) {
+        case 11:
+        console.log("ES_NUM_11");
         return "ES_NUM_11";
-    }
-    if(dameCarta === 12) {
+        case 12:
+        console.log("ES_NUM_12");
         return "ES_NUM_12";
-    }
-    if(hasSuperadoElNumeroDePuntos()) {
-        return "GAME_OVER_PUNTOS";
+        default:
+        console.log("Valor no reconocido");
+        return "INVALID_CARD_NUMBER";
     }
 };
 
@@ -153,15 +150,18 @@ const handleCompruebaClick = () => {
         texto = inputElement.value;
     }
 
-    const estado: Estados = mostrarCarta (carta, estado);
+    const estado: Estados = mostrarCarta (estado);
     pideCarta(dameCarta);
-    gestionarGameOver(estado);
+    /*gestionarGameOver(estado);*/
    };
    
    const botonComprobar = document.getElementById("carta");
+
+   if (botonComprobar !== undefined && botonCarta !== null) {
    botonComprobar?.addEventListener("click", handleCompruebaClick);
+   };
 
-
+/*
 // 4. Sumar Puntuación
 
 // 5. Game Over (¿orden con el resto?)
