@@ -12,17 +12,16 @@ const muestraPuntuacion = () => {
 
 document.addEventListener("DOMContentLoaded", muestraPuntuacion);
 
-// 2. Pedir carta (¿Al clicar el button no da carta elegida?)
+// 2. Pedir carta (instaceof distinto null.., no necesito ningun input para seleccionar carta, funcion aparte con return de carta elegida
 
 const cartaAlAzar = (min: number, max: number) => Math.floor (Math.random()*(max - min + 1) + min);
-
-const cartaElegida: number = cartaAlAzar(1,10);
 
 const NUMERO_SIETE: number = 7;
 
 const dameCarta =() => {
     const elementoPuntuacion = (document.getElementById("puntuacion") as HTMLInputElement).value;
     const numeroPuntuacion = parseInt (elementoPuntuacion);
+    const cartaElegida: number = cartaAlAzar(1,10);
     const numeroMasDos = cartaElegida + 2;
 
     if(numeroPuntuacion > NUMERO_SIETE) {
@@ -33,7 +32,7 @@ const dameCarta =() => {
 
 const botonCarta = document.getElementById("carta");
 botonCarta?.addEventListener("click", dameCarta);
-
+/*
 // 3. Mostrar carta (¿Como llamamos al final, handle?, ¿dameCarta: number?, ¿si saltamos numeros porque asignamos cartas?)
 
 type Estados =
@@ -181,6 +180,20 @@ const gestionarGameOver = (estado: Estados) => {
 };
 
 // 6. Me planto (¿return?, ¿switch e imagenes resto alternativas?)
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
 
 /*
 const MENOR_CUATRO = 1;
