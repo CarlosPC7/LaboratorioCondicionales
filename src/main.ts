@@ -142,7 +142,7 @@ const pideCarta = (dameCarta: number): string => {
     }
 };
 
-const handleCompruebaClick = () => {
+const handleCompruebaClick = ()=> {
     let texto ="";
     const inputElement = document.getElementById("numero");
 
@@ -150,8 +150,9 @@ const handleCompruebaClick = () => {
         texto = inputElement.value;
     }
 
-    const estado: Estados = mostrarCarta (estado);
-    pideCarta(dameCarta);
+    const estado: Estados = 
+    pideCarta(parseInt(texto));
+    mostrarCarta (estado);
     /*gestionarGameOver(estado);*/
    };
    
