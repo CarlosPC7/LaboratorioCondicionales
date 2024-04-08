@@ -162,9 +162,12 @@ const handleCompruebaClick = ()=> {
    botonComprobar?.addEventListener("click", handleCompruebaClick);
    };
 
-/*
+
 // 4. Sumar Puntuación
 
+
+
+/*
 // 5. Game Over (¿orden con el resto?)
 
 const MAXIMO_PUNTOS = 7.5 ;
