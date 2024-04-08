@@ -12,7 +12,7 @@ const muestraPuntuacion = () => {
 
 document.addEventListener("DOMContentLoaded", muestraPuntuacion);
 
-// 2. Pedir carta (instaceof, no necesito ningun input para seleccionar carta, funcion aparte con return de carta elegida
+// 2. Pedir carta
 
 const cartaAlAzar = (min: number, max: number) => Math.floor (Math.random()*(max - min + 1) + min);
 
@@ -22,9 +22,14 @@ const dameCarta =() => {
     const NUMERO_SIETE: number = 7;
 
     if(cartaElegida > NUMERO_SIETE) {
+        console.log(cartaElegida + 2);
         return cartaElegida + 2;
-        } else {return cartaElegida}
-    };
+        } else {
+            console.log(cartaElegida);
+            return cartaElegida;
+        }
+
+};
 
 const botonCarta = document.getElementById("carta");
 
