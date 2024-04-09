@@ -29,17 +29,63 @@ const dameCarta =() => {
             return cartaElegida;
         }
 
+    const pideCarta = (cartaElegida: number): void => {
+        let imagen ="";
+         switch (cartaElegida) {
+            case 1:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/1_as-copas.jpg`;
+            break;
+            case 2:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/2_dos-copas.jpg`;
+            break;
+            case 3:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/3_tres-copas.jpg`;
+            break;
+            case 4:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/4_cuatro-copas.jpg`;
+            break;
+            case 5:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/5_cinco-copas.jpg`;
+            break;
+            case 6:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/6_seis-copas.jpg`;
+            break;
+            case 7:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/7_siete-copas.jpg`;
+            break;
+            case 10:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/10_sota-copas.jpg`;
+            break;
+            case 11:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/11_caballo-copas.jpg`;
+            break;
+            case 12:
+            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/12_rey-copas.jpg`;
+            break;
+            default:
+            imagen = "Sigue intentándolo";
+            break;
+            }
+        
+            const elementoImagen = document.getElementById("imagenCarta");
+            if (elementoImagen instanceof HTMLImageElement) {
+                elementoImagen.src = imagen;
+            } else {
+                console.error("Elemento img no encontrado en el DOM");
+            }
+                };
+
 };
 
-const botonCarta = document.getElementById("carta");
+        const botonCarta = document.getElementById("carta");
 
-if (botonCarta !== undefined && botonCarta !== null) {
-botonCarta.addEventListener("click", dameCarta);
-};
+        if (botonCarta !== undefined && botonCarta !== null) {
+        botonCarta.addEventListener("click", dameCarta);
+        };
 
 
 // 3. Mostrar carta (¿Como llamamos al final, handle?, ¿dameCarta: number?, ¿si saltamos numeros porque asignamos cartas?)
-
+/*
 type Estados =
 | "ES_NUM_1"
 | "ES_NUM_2"
@@ -53,7 +99,75 @@ type Estados =
 | "ES_NUM_12"
 | "INVALID_CARD_NUMBER"
 | "GAME_OVER_PUNTOS";
+*/
+/*
+const pideCarta = (dameCarta: number): void => {
+    let imagen ="";
+    switch (dameCarta) {
+        case 1:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/1_as-copas.jpg`;
+        break;
+        case 2:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/2_dos-copas.jpg`;
+        break;
+        case 3:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/3_tres-copas.jpg`;
+        break;
+        case 4:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/4_cuatro-copas.jpg`;
+        break;
+        case 5:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/5_cinco-copas.jpg`;
+        break;
+        case 6:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/6_seis-copas.jpg`;
+        break;
+        case 7:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/7_siete-copas.jpg`;
+        break;
+        case 10:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/10_sota-copas.jpg`;
+        break;
+        case 11:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/11_caballo-copas.jpg`;
+        break;
+        case 12:
+        imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/12_rey-copas.jpg`;
+        break;
+        default:
+        imagen = "Sigue intentándolo";
+        break;
+        }
 
+        const elementoImagen = document.getElementById("imagenCarta");
+        if (elementoImagen instanceof HTMLImageElement) {
+            elementoImagen.src = imagen;
+        } else {
+            console.error("Elemento img no encontrado en el DOM");
+        }
+        };
+*/
+/*
+        const handleCompruebaClick = ()=> {
+            let texto ="";
+            const inputElement = document.getElementById("numero");
+        
+            if (inputElement && inputElement instanceof HTMLInputElement) {
+                texto = inputElement.value;
+            }
+        
+            const estado: Estados = 
+            pideCarta(parseInt(texto));
+            dameCarta();
+           };
+           
+           const botonComprobar = document.getElementById("carta");
+        
+           if (botonComprobar !== undefined && botonComprobar !== null) {
+           botonComprobar?.addEventListener("click", handleCompruebaClick);
+           };
+*/
+/*
 const mostrarCarta = (estado: Estados) : void => {
     let imagen ="";
     switch (estado) {
@@ -102,7 +216,8 @@ if (elementoImagen instanceof HTMLImageElement) {
     console.error("Elemento img no encontrado en el DOM");
 }
 };
-
+*/
+/*
 const pideCarta = (dameCarta: number): string => {
 
     switch (dameCarta) {
@@ -141,7 +256,8 @@ const pideCarta = (dameCarta: number): string => {
         return "INVALID_CARD_NUMBER";
     }
 };
-
+*/
+/*
 const handleCompruebaClick = ()=> {
     let texto ="";
     const inputElement = document.getElementById("numero");
@@ -153,7 +269,7 @@ const handleCompruebaClick = ()=> {
     const estado: Estados = 
     pideCarta(parseInt(texto));
     mostrarCarta (estado);
-    /*gestionarGameOver(estado);*/
+    gestionarGameOver(estado);
    };
    
    const botonComprobar = document.getElementById("carta");
@@ -161,7 +277,7 @@ const handleCompruebaClick = ()=> {
    if (botonComprobar !== undefined && botonCarta !== null) {
    botonComprobar?.addEventListener("click", handleCompruebaClick);
    };
-
+*/
 
 // 4. Sumar Puntuación
 
