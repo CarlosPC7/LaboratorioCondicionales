@@ -7,7 +7,7 @@ const numeroAleatorio = generarNumeroAleatorio();
 const carta = generarCarta(numeroAleatorio);
 const urlCarta = obtenerUrlCarta (carta);
 mostrarImagen(urlCarta);
-mostrarPuntuacion(carta);
+mostrarPuntuacion();
 };
 
 const generarCarta = (numeroAleatorio: number) => {
@@ -56,11 +56,11 @@ const mostrarImagen = (urlCarta: string) => {
 
 let guardarPuntuacion: number = 0;
 
-const mostrarPuntuacion = (carta: number) => {
+const mostrarPuntuacion = () => {
     const elementoPuntuacion = document.getElementById("puntuacion");
 
     if(elementoPuntuacion) {
-        elementoPuntuacion.innerHTML = guardarPuntuacion + carta;
+        elementoPuntuacion.innerHTML = `${guardarPuntuacion}`;
     }
 };
 
