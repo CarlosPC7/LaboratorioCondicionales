@@ -53,9 +53,9 @@ const mostrarImagen = (urlCarta: string) => {
             }
 };
 
-let almacenarPuntuacion = 0;
+let guardarPuntuacion: number = 0;
 
-const muestraPuntuacion = () => {
+const mostrarPuntuacion = () => {
     const elementoPuntuacion = document.getElementById("puntuacion");
 
     if(elementoPuntuacion) {
