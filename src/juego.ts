@@ -7,7 +7,8 @@ const numeroAleatorio = generarNumeroAleatorio();
 const carta = generarCarta(numeroAleatorio);
 const urlCarta = obtenerUrlCarta (carta);
 mostrarImagen(urlCarta);
-mostrarPuntuacion();
+
+sumarANuevaPuntuacion(carta);
 };
 
 const generarCarta = (numeroAleatorio: number) => {
@@ -56,12 +57,18 @@ const mostrarImagen = (urlCarta: string) => {
 
 let guardarPuntuacion: number = 0;
 
+
 const mostrarPuntuacion = () => {
     const elementoPuntuacion = document.getElementById("puntuacion");
-
+    
     if(elementoPuntuacion) {
         elementoPuntuacion.innerHTML = `${guardarPuntuacion}`;
     }
+};
+
+const sumarANuevaPuntuacion = (carta: number) => {
+    guardarPuntuacion += carta;
+    mostrarPuntuacion();
 };
 
 if(botonEmpezarPartida !== null && botonEmpezarPartida !== undefined && botonEmpezarPartida instanceof HTMLButtonElement) {
