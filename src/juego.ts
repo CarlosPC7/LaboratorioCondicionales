@@ -53,6 +53,16 @@ const mostrarImagen = (urlCarta: string) => {
             }
 };
 
+let almacenarPuntuacion = 0;
+
+const muestraPuntuacion = () => {
+    const elementoPuntuacion = document.getElementById("puntuacion");
+
+    if(elementoPuntuacion) {
+        elementoPuntuacion.innerHTML = `${almacenarPuntuacion}`;
+    }
+};
+
 if(botonEmpezarPartida !== null && botonEmpezarPartida !== undefined && botonEmpezarPartida instanceof HTMLButtonElement) {
 botonEmpezarPartida.addEventListener("click",empezarPartida)
 }

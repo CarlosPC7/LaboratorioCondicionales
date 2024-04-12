@@ -1,8 +1,8 @@
 // 1. Mostrar puntuación
 
-let almacenarPuntuacion = 0;
+let almacenarPuntuacion1 = 0;
 
-const muestraPuntuacion = () => {
+const muestraPuntuacion1 = () => {
     const elementoPuntuacion = document.getElementById("puntuacion");
 
     if(elementoPuntuacion) {
@@ -28,45 +28,6 @@ const dameCarta =() => {
             console.log(cartaElegida);
             return cartaElegida;
         }
-/*
-    const pideCarta = (cartaElegida: number): void => {
-        let imagen ="";
-         switch (cartaElegida) {
-            case 1:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/1_as-copas.jpg`;
-            break;
-            case 2:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/2_dos-copas.jpg`;
-            break;
-            case 3:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/3_tres-copas.jpg`;
-            break;
-            case 4:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/4_cuatro-copas.jpg`;
-            break;
-            case 5:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/5_cinco-copas.jpg`;
-            break;
-            case 6:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/6_seis-copas.jpg`;
-            break;
-            case 7:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/7_siete-copas.jpg`;
-            break;
-            case 10:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/10_sota-copas.jpg`;
-            break;
-            case 11:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/11_caballo-copas.jpg`;
-            break;
-            case 12:
-            imagen = `https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/copas/12_rey-copas.jpg`;
-            break;
-            default:
-            imagen = "Sigue intentándolo";
-            break;
-            }
-        */
             const elementoImagen = document.getElementById("imagenCarta");
             if (elementoImagen instanceof HTMLImageElement) {
                 elementoImagen.src = imagen;
