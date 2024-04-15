@@ -140,4 +140,26 @@ const puntuacionObtenida = () => {
 
 if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instanceof HTMLButtonElement) {
     botonMePlanto.addEventListener("click",seAcabaPartida)
-    }
+    };
+
+
+    const botonReiniciar = document.getElementById("reiniciar");
+
+    const seReiniciaPartida = () => {
+        apareceBoton();
+    };
+
+    const apareceBoton =() => {
+        const elementoButton2 = document.getElementById("carta");
+        const elementoButton3 = document.getElementById("reiniciar");
+        if ( elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3 instanceof HTMLButtonElement) {
+            elementoButton3.disabled = false;
+        } else {
+            console.error ("gestionarGameOver: No se ha encontrado el elemento id con Button")
+        }
+    };
+
+
+    if(botonReiniciar !== null && botonReiniciar !== undefined && botonReiniciar instanceof HTMLButtonElement) {
+        botonReiniciar.addEventListener("click",seReiniciaPartida)
+        };
