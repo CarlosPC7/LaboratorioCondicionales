@@ -121,17 +121,19 @@ const numeroSieteYMedio = 7.5;
 
 const puntuacionObtenida = () => {
     const elementoMensaje2 = document.getElementById("mensaje");
-    if((guardarPuntuacion < numeroCuatro) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
+    if(elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
+        if(guardarPuntuacion < numeroCuatro) {
         elementoMensaje2.innerHTML = `Has sido muy conservador`;
-    }
-    if((guardarPuntuacion === numeroCinco) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
-        elementoMensaje2.innerHTML = `Has sido muy conservador`;
-    }
-    if((guardarPuntuacion === numeroSeis || numeroSiete) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
-        elementoMensaje2.innerHTML = `Casi casi...`;
-    }
-    if((guardarPuntuacion === numeroSieteYMedio) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
-        elementoMensaje2.innerHTML = `¡Lo has clavado! ¡Enhorabuena!`;
+        }
+        if(guardarPuntuacion === numeroCinco) {
+            elementoMensaje2.innerHTML = `Te ha entrado el canguelo eh?`;
+        }
+        if(guardarPuntuacion === numeroSeis || numeroSiete) {
+            elementoMensaje2.innerHTML = `Casi casi...`;
+        }
+        if(guardarPuntuacion === numeroSieteYMedio) {
+            elementoMensaje2.innerHTML = `¡Lo has clavado! ¡Enhorabuena!`;
+        }
     }
 };
 
