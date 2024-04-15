@@ -68,7 +68,7 @@ const mostrarPuntuacion = () => {
         elementoPuntuacion.innerHTML = `${guardarPuntuacion}`;
     }
     if(guardarPuntuacion > totalPuntuacion && elementoMensaje !== null && elementoMensaje !== undefined) {
-        elementoMensaje.innerHTML = `Has superado el máximo de puntuación`;
+        elementoMensaje.innerHTML = `HAS SUPERADO EL MÁXIMO DE PUNTUACIÓN!!`;
     }
 
 };
