@@ -79,7 +79,7 @@ const totalPuntuacion = 7.5;
 const gameOver = () => {
     const elementoMensaje = document.getElementById("mensaje");
     if(guardarPuntuacion > totalPuntuacion && elementoMensaje !== null && elementoMensaje !== undefined) {
-        elementoMensaje.innerHTML = ` GAME OVER. HAS SUPERADO EL MÁXIMO DE PUNTUACIÓN!!`;
+        elementoMensaje.innerHTML = `GAME OVER. HAS SUPERADO EL MÁXIMO DE PUNTUACIÓN!!`;
     }
 };
 
@@ -120,17 +120,20 @@ const numeroCinco = 5;
 const numeroSeis = 6;
 const numeroSiete = 7;
 const numeroSieteYMedio = 7.5;
-
+//
 const puntuacionObtenida = () => {
     const elementoMensaje2 = document.getElementById("mensaje");
     if(elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
-        if(guardarPuntuacion < numeroCuatro) {
+        if(guardarPuntuacion <= numeroCuatro) {
         elementoMensaje2.innerHTML = `Has sido muy conservador`;
         }
         if(guardarPuntuacion === numeroCinco) {
             elementoMensaje2.innerHTML = `Te ha entrado el canguelo eh?`;
         }
-        if(guardarPuntuacion === numeroSeis || numeroSiete) {
+        if(guardarPuntuacion === numeroSeis) {
+            elementoMensaje2.innerHTML = `Casi casi...`;
+        }
+        if(guardarPuntuacion <= numeroSiete) {
             elementoMensaje2.innerHTML = `Casi casi...`;
         }
         if(guardarPuntuacion === numeroSieteYMedio) {
@@ -176,6 +179,16 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
         const numeroPartida = document.getElementById("puntuacion");
         if(numeroPartida instanceof HTMLDivElement) {
             numeroPartida.innerHTML = ' ';
+        }
+        const imagenCarta = document.getElementById("imagenCarta");
+            if (imagenCarta instanceof HTMLImageElement) {
+                imagenCarta.src = ' ';
+            } else {
+                console.error("Elemento img no encontrado en el DOM");
+            }
+        const mensajePartida = document.getElementById("mensaje");
+        if(mensajePartida instanceof HTMLDivElement){
+            mensajePartida.innerHTML = ' ';
         }
     };
 
