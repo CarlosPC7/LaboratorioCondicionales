@@ -179,6 +179,7 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
         }
     };
 
+
     if(botonReiniciar !== null && botonReiniciar !== undefined && botonReiniciar instanceof HTMLButtonElement) {
         botonReiniciar.addEventListener("click",seReiniciaPartida)
         };
