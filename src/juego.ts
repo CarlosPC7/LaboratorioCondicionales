@@ -95,3 +95,47 @@ const gestionarGameOver = () => {
 if(botonEmpezarPartida !== null && botonEmpezarPartida !== undefined && botonEmpezarPartida instanceof HTMLButtonElement) {
 botonEmpezarPartida.addEventListener("click",empezarPartida)
 }
+
+const botonMePlanto = document.getElementById("meplanto");
+
+const seAcabaPartida = () => {
+nosPlantamos();
+puntuacionObtenida();
+
+};
+
+const nosPlantamos =() => {
+    const elementoButton = document.getElementById("carta");
+    if (elementoButton && elementoButton instanceof HTMLButtonElement) {
+        elementoButton.disabled = true;
+    } else {
+        console.error ("gestionarGameOver: No se ha encontrado el elemendo id con Button")
+    }
+};
+
+const numeroCuatro = 4;
+const numeroCinco = 5;
+const numeroSeis = 6;
+const numeroSiete = 7;
+const numeroSieteYMedio = 7.5;
+
+const puntuacionObtenida = () => {
+    const elementoMensaje2 = document.getElementById("mensaje");
+    if((guardarPuntuacion < numeroCuatro) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
+        elementoMensaje2.innerHTML = `Has sido muy conservador`;
+    }
+    if((guardarPuntuacion === numeroCinco) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
+        elementoMensaje2.innerHTML = `Has sido muy conservador`;
+    }
+    if((guardarPuntuacion === numeroSeis || numeroSiete) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
+        elementoMensaje2.innerHTML = `Casi casi...`;
+    }
+    if((guardarPuntuacion === numeroSieteYMedio) && elementoMensaje2 !== null && elementoMensaje2 !== undefined) {
+        elementoMensaje2.innerHTML = `¡Lo has clavado! ¡Enhorabuena!`;
+    }
+};
+
+
+if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instanceof HTMLButtonElement) {
+    botonMePlanto.addEventListener("click",seAcabaPartida)
+    }
