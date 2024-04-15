@@ -190,6 +190,10 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
         if(mensajePartida instanceof HTMLDivElement){
             mensajePartida.innerHTML = ' ';
         }
+        const iniciarPuntuacion = document.getElementById("puntuacion");
+        if(iniciarPuntuacion instanceof HTMLDivElement) {
+            iniciarPuntuacion.innerHTML = ' ';
+        }
     };
 
 
