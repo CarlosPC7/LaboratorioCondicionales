@@ -9,6 +9,7 @@ const urlCarta = obtenerUrlCarta (carta);
 mostrarImagen(urlCarta);
 
 sumarANuevaPuntuacion(carta);
+
 };
 
 const generarCarta = (numeroAleatorio: number) => {
@@ -56,14 +57,20 @@ const mostrarImagen = (urlCarta: string) => {
 };
 
 let guardarPuntuacion: number = 0;
+const totalPuntuacion = 7.5;
 
 
 const mostrarPuntuacion = () => {
     const elementoPuntuacion = document.getElementById("puntuacion");
-    
+    const elementoMensaje = document.getElementById("mensaje");
+
     if(elementoPuntuacion) {
         elementoPuntuacion.innerHTML = `${guardarPuntuacion}`;
     }
+    if(guardarPuntuacion > totalPuntuacion && elementoMensaje !== null && elementoMensaje !== undefined) {
+        elementoMensaje.innerHTML = `Has superado el máximo de puntuación`;
+    }
+
 };
 
 const sumarANuevaPuntuacion = (carta: number) => {
@@ -72,6 +79,16 @@ const sumarANuevaPuntuacion = (carta: number) => {
 };
 
 
+const gestionarGameOver = (sumarANuevaPuntuacion: number) => {
+    if (sumarANuevaPuntuacion > 7.5) {
+        const elementoButton = document.getElementById("carta");
+        if (elementoButton && elementoButton instanceof HTMLButtonElement) {
+            elementoButton.disabled = true;
+        } else {
+            console.error ("gestionarGameOver: No se ha encontrado el elemendo id con Button")
+        }
+    }
+};
 
 if(botonEmpezarPartida !== null && botonEmpezarPartida !== undefined && botonEmpezarPartida instanceof HTMLButtonElement) {
 botonEmpezarPartida.addEventListener("click",empezarPartida)
