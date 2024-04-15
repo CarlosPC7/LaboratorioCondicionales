@@ -149,6 +149,7 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
 
     const seReiniciaPartida = () => {
         vamosAPorOtraPartida();
+        resetPartida();
     };
 
     const apareceBoton =() => {
@@ -170,6 +171,13 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
             console.error ("Error not found 404")
         }
     }
+
+    const resetPartida = () => {
+        const numeroPartida = document.getElementById("puntuacion");
+        if(numeroPartida instanceof HTMLDivElement) {
+            numeroPartida.innerHTML = ' ';
+        }
+    };
 
     if(botonReiniciar !== null && botonReiniciar !== undefined && botonReiniciar instanceof HTMLButtonElement) {
         botonReiniciar.addEventListener("click",seReiniciaPartida)
