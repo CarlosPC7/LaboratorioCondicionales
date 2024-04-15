@@ -71,6 +71,8 @@ const sumarANuevaPuntuacion = (carta: number) => {
     mostrarPuntuacion();
 };
 
+
+
 if(botonEmpezarPartida !== null && botonEmpezarPartida !== undefined && botonEmpezarPartida instanceof HTMLButtonElement) {
 botonEmpezarPartida.addEventListener("click",empezarPartida)
 }
