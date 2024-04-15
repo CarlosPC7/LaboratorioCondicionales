@@ -11,6 +11,8 @@ mostrarImagen(urlCarta);
 sumarANuevaPuntuacion(carta);
 gameOver();
 gestionarGameOver();
+
+apareceBoton();
 };
 
 const generarCarta = (numeroAleatorio: number) => {
@@ -101,7 +103,7 @@ const botonMePlanto = document.getElementById("meplanto");
 const seAcabaPartida = () => {
 nosPlantamos();
 puntuacionObtenida();
-
+apareceBoton();
 };
 
 const nosPlantamos =() => {
@@ -146,7 +148,7 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
     const botonReiniciar = document.getElementById("reiniciar");
 
     const seReiniciaPartida = () => {
-        apareceBoton();
+        vamosAPorOtraPartida();
     };
 
     const apareceBoton =() => {
@@ -155,10 +157,19 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
         if ( elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3 instanceof HTMLButtonElement) {
             elementoButton3.disabled = false;
         } else {
-            console.error ("gestionarGameOver: No se ha encontrado el elemento id con Button")
+            console.error ("Error not found 404")
         }
     };
 
+    const vamosAPorOtraPartida = () => {
+        const elementoButton2 = document.getElementById("carta");
+        const elementoButton3 = document.getElementById("reiniciar");
+        if ( elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3 instanceof HTMLButtonElement && elementoButton3.disabled === false) {
+            elementoButton2.disabled = false;
+        } else {
+            console.error ("Error not found 404")
+        }
+    }
 
     if(botonReiniciar !== null && botonReiniciar !== undefined && botonReiniciar instanceof HTMLButtonElement) {
         botonReiniciar.addEventListener("click",seReiniciaPartida)
