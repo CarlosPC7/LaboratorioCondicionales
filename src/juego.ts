@@ -17,10 +17,14 @@ apareceBoton();
 
 const generarCarta = (numeroAleatorio: number) => {
     if (numeroAleatorio > 7) {
-        return numeroAleatorio + 2.5;
+        return numeroAleatorio + 2;
+    } else {
+        if (numeroAleatorio = 10, 11, 12) {
+        return 0.5;
     } else {
         return numeroAleatorio;
     }
+}
 };
 
 const obtenerUrlCarta = (carta: number) => {
