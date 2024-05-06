@@ -9,6 +9,7 @@ const urlCarta = obtenerUrlCarta (carta);
 mostrarImagen(urlCarta);
 
 sumarANuevaPuntuacion(carta);
+mostrarPuntuacion();
 gameOver();
 gestionarGameOver();
 
@@ -19,12 +20,8 @@ const generarCarta = (numeroAleatorio: number) => {
     if (numeroAleatorio > 7) {
         return numeroAleatorio + 2;
     } else {
-        if (numeroAleatorio = 10, 11, 12) {
-        return 0.5;
-    } else {
         return numeroAleatorio;
     }
-}
 };
 
 const obtenerUrlCarta = (carta: number) => {
@@ -74,8 +71,8 @@ const mostrarPuntuacion = () => {
 };
 
 const sumarANuevaPuntuacion = (carta: number) => {
-    guardarPuntuacion += carta;
-    mostrarPuntuacion();
+    if (carta > 7) {guardarPuntuacion +=0.5}
+    else {guardarPuntuacion += carta};
 };
 
 const totalPuntuacion = 7.5;
@@ -86,6 +83,8 @@ const gameOver = () => {
         elementoMensaje.innerHTML = `GAME OVER. HAS SUPERADO EL MÁXIMO DE PUNTUACIÓN!!`;
     }
 };
+
+//deshabilitar boton, 
 
 const gestionarGameOver = () => {
     if (guardarPuntuacion > totalPuntuacion) {
@@ -177,26 +176,26 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
         } else {
             console.error ("Error not found 404")
         }
-    }
+    };
 
     const resetPartida = () => {
         const numeroPartida = document.getElementById("puntuacion");
-        if(numeroPartida instanceof HTMLDivElement) {
+        if(numeroPartida !== null && numeroPartida !== undefined && numeroPartida instanceof HTMLDivElement) {
             numeroPartida.innerHTML = ' ';
         }
         const imagenCarta = document.getElementById("imagenCarta");
-            if (imagenCarta instanceof HTMLImageElement) {
+            if (imagenCarta !== null && imagenCarta !== undefined && imagenCarta instanceof HTMLImageElement) {
                 imagenCarta.src = ' ';
             } else {
                 console.error("Elemento img no encontrado en el DOM");
             }
         const mensajePartida = document.getElementById("mensaje");
-        if(mensajePartida instanceof HTMLDivElement){
+        if(mensajePartida !== null && mensajePartida !== undefined && mensajePartida instanceof HTMLDivElement){
             mensajePartida.innerHTML = ' ';
         }
         const iniciarPuntuacion = document.getElementById("puntuacion");
-        if(iniciarPuntuacion instanceof HTMLDivElement) {
-            iniciarPuntuacion.innerHTML = ' ';
+        if(iniciarPuntuacion !== null && iniciarPuntuacion !== undefined && iniciarPuntuacion instanceof HTMLDivElement) {
+            guardarPuntuacion = 0;
         }
     };
 
