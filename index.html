@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Juego de las siete media</title>
+    <link rel="stylesheet" href="style1.css">
   </head>
   <body>
-    <div id="app">
-      <h1 class="titulo">Juego de las siete media</h1>
-      <button class="boton" id="carta">Elegir Carta</button> <button class="boton" id="meplanto">Me planto</button> <button class="boton" id="reiniciar" disabled>Reiniciar partida</button>
-      <div class="puntuacion" id="puntuacion"></div>
-      <div class="mensaje" id="mensaje"></div>
-      <img class="imagenCarta" id="imagenCarta" src="https://github.com/Lemoncode/fotos-ejemplos/blob/main/cartas/back.jpg" alt="">
+    <div class="bloque1" id="app">
+      <h1 class="titulo1">Juego de las siete media</h1>
+      <div class="botones">
+      <button class="boton1" id="carta">Elegir Carta</button> <button class="boton1" id="meplanto">Me planto</button> <button class="boton1" id="reiniciar" disabled>Reiniciar partida</button>
+      </div>
+      <div class="puntuacion1" id="puntuacion"></div>
+      <div class="mensaje1" id="mensaje"></div>
+      <div class="imagenCarta1">
+      <img id="imagenCarta" src="https://github.com/Lemoncode/fotos-ejemplos/blob/main/cartas/back.jpg" alt="">
+      </div>
     </div>
     <script type="module" src="/src/juego.ts"></script>
   </body>
