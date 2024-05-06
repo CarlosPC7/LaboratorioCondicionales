@@ -17,7 +17,7 @@ apareceBoton();
 
 const generarCarta = (numeroAleatorio: number) => {
     if (numeroAleatorio > 7) {
-        return numeroAleatorio + 2;
+        return numeroAleatorio + 2.5;
     } else {
         return numeroAleatorio;
     }
