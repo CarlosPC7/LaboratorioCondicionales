@@ -11,13 +11,23 @@ body {
     align-items: center;
 }
 
-.boton1{
+.boton1:enabled{
     margin:8px;
     font-size: 16px;
     font-weight:600;
-    color: white;
     padding: 8px;
-    background-color: rgb(37, 64, 221);
-    border-radius: 10px;
-    border-color: brown;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.573);
+    border-radius: 16px;
+    border: 4px solid gray;
+}
+
+.boton1:disabled{
+    margin:8px;
+    font-size: 16px;
+    font-weight:600;
+    padding: 8px;
+    color: white;
+    background-color: rgba(244, 5, 5, 0.655);
+    border-radius: 16px;
 }
