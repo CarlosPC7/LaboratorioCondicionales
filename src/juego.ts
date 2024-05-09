@@ -166,7 +166,9 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
     const apareceBoton =() => {
         const elementoButton2 = document.getElementById("carta");
         const elementoButton3 = document.getElementById("reiniciar");
-        if (elementoButton2!== null && elementoButton2!== undefined && elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3!== null && elementoButton3!== undefined && elementoButton3 instanceof HTMLButtonElement) {
+        if (elementoButton2!== null && elementoButton2!== undefined
+            && elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled
+            && elementoButton3!== null && elementoButton3!== undefined && elementoButton3 instanceof HTMLButtonElement) {
             elementoButton3.disabled = false;
         } else {
             console.error ("Error not found 404")
@@ -176,7 +178,9 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
     const vamosAPorOtraPartida = () => {
         const elementoButton2 = document.getElementById("carta");
         const elementoButton3 = document.getElementById("reiniciar");
-        if (elementoButton2!== null && elementoButton2!== undefined && elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3!== null && elementoButton3!== undefined && elementoButton3 instanceof HTMLButtonElement && elementoButton3.disabled === false) {
+        if (elementoButton2!== null && elementoButton2!== undefined && elementoButton2 instanceof HTMLButtonElement
+            && elementoButton2.disabled && elementoButton3!== null && elementoButton3!== undefined
+            && elementoButton3 instanceof HTMLButtonElement && elementoButton3.disabled === false) {
             elementoButton2.disabled = false;
         } else {
             console.error ("Error not found 404")
