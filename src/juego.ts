@@ -52,7 +52,7 @@ const obtenerUrlCarta = (carta: number) => {
 
 const mostrarImagen = (urlCarta: string) => {
     const elementoImagen = document.getElementById("imagenCarta");
-            if (elementoImagen instanceof HTMLImageElement) {
+            if (elementoImagen !== null && elementoImagen !== undefined && elementoImagen instanceof HTMLImageElement) {
                 elementoImagen.src = urlCarta;
             } else {
                 console.error("Elemento img no encontrado en el DOM");
@@ -87,7 +87,7 @@ const gameOver = () => {
 const deshabilitarBoton = () => {
     if (guardarPuntuacion > totalPuntuacion) {
         const elementoButton = document.getElementById("carta");
-        if (elementoButton && elementoButton instanceof HTMLButtonElement) {
+        if (elementoButton!== null && elementoButton!== undefined && elementoButton && elementoButton instanceof HTMLButtonElement) {
             elementoButton.disabled = true;
         } else {
             console.error ("gestionarGameOver: No se ha encontrado el elemendo id con Button")
@@ -116,7 +116,7 @@ apareceBoton();
 
 const nosPlantamos =() => {
     const elementoButton = document.getElementById("carta");
-    if (elementoButton && elementoButton instanceof HTMLButtonElement) {
+    if (elementoButton!== null && elementoButton !== undefined && elementoButton && elementoButton instanceof HTMLButtonElement) {
         elementoButton.disabled = true;
     } else {
         console.error ("gestionarGameOver: No se ha encontrado el elemendo id con Button")
@@ -166,7 +166,7 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
     const apareceBoton =() => {
         const elementoButton2 = document.getElementById("carta");
         const elementoButton3 = document.getElementById("reiniciar");
-        if ( elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3 instanceof HTMLButtonElement) {
+        if (elementoButton2!== null && elementoButton2!== undefined && elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3!== null && elementoButton3!== undefined && elementoButton3 instanceof HTMLButtonElement) {
             elementoButton3.disabled = false;
         } else {
             console.error ("Error not found 404")
@@ -176,7 +176,7 @@ if(botonMePlanto !== null && botonMePlanto !== undefined && botonMePlanto instan
     const vamosAPorOtraPartida = () => {
         const elementoButton2 = document.getElementById("carta");
         const elementoButton3 = document.getElementById("reiniciar");
-        if ( elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3 instanceof HTMLButtonElement && elementoButton3.disabled === false) {
+        if (elementoButton2!== null && elementoButton2!== undefined && elementoButton2 instanceof HTMLButtonElement && elementoButton2.disabled && elementoButton3!== null && elementoButton3!== undefined && elementoButton3 instanceof HTMLButtonElement && elementoButton3.disabled === false) {
             elementoButton2.disabled = false;
         } else {
             console.error ("Error not found 404")
