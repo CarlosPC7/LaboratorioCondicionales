@@ -10,8 +10,7 @@ mostrarImagen(urlCarta);
 
 sumarANuevaPuntuacion(carta);
 mostrarPuntuacion();
-gameOver();
-gestionarGameOver();
+gestionarPartida();
 
 apareceBoton();
 };
@@ -84,9 +83,8 @@ const gameOver = () => {
     }
 };
 
-//deshabilitar boton, 
 
-const gestionarGameOver = () => {
+const deshabilitarBoton = () => {
     if (guardarPuntuacion > totalPuntuacion) {
         const elementoButton = document.getElementById("carta");
         if (elementoButton && elementoButton instanceof HTMLButtonElement) {
@@ -94,6 +92,13 @@ const gestionarGameOver = () => {
         } else {
             console.error ("gestionarGameOver: No se ha encontrado el elemendo id con Button")
         }
+    }
+};
+
+const gestionarPartida = () => {
+    if (guardarPuntuacion > totalPuntuacion) {
+        gameOver();
+        deshabilitarBoton();
     }
 };
 
