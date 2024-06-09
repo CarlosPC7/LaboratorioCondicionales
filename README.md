@@ -10,7 +10,7 @@
 
 - Crea una función que se llame muestraPuntuacion que muestre la puntuación actual en el div.
 ![Captura de pantalla 2024-05-09 153055](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/0b26c4a9-965b-48ce-afe4-7618f5483f0d)
-![Captura de pantalla 2024-05-09 153112](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/9fe85902-fd74-486f-acce-6c0f289c3cd1)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/182d532e-0511-47cc-82e7-81f8648394b4)
 
 - Invoca a la función en cuanto este disponible el DOM.
 ![Captura de pantalla 2024-05-09 153132](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/076e5f17-3caf-4b2b-b2ad-665b44fb716a)
