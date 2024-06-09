@@ -64,20 +64,19 @@
 
 - Si la puntuación es 7.5, mostrar un mensaje que diga "¡ Lo has clavado! ¡Enhorabuena!"
 
-![Captura de pantalla 2024-05-09 154122](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/19138f1c-f53d-4079-90bc-d641c6cd6a7a)
-![Captura de pantalla 2024-05-09 154154](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/4278d426-2bf0-4758-93d3-5686cd041641)
-![Captura de pantalla 2024-05-09 154204](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/3885bed0-b2a2-48c1-9620-df012a99f6dd)
-![Captura de pantalla 2024-05-09 154307](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/d43a3801-6206-41f9-88a2-639b26d2f76b)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/d3c024f8-9479-406b-ae73-331f6be362ab)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/823b21ad-7385-407d-a120-78f2efca0184)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/a6fe3374-ebd3-424b-b949-5a88339c23c2)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/1dd44ada-1c26-4e6e-ac57-2f2ac48aa25c)
+
 
 
 ## 7. Nueva partida
 
 - Una vez que el usuario ha terminado la partida (sea porque se ha plantado o porque ha perdido), se le muestra un botón para que pueda empezar una nueva partida.
-![Captura de pantalla 2024-05-09 154316](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/867764fa-20be-4aa0-8df4-2331394149b5)
-![Captura de pantalla 2024-05-09 154332](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/14187c95-faec-4587-8c12-ee2788568b4b)
-![Captura de pantalla 2024-05-09 154408](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/c475e4f2-37e9-4e75-93f5-ac3b5d98631d)
-![Captura de pantalla 2024-05-09 154423](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/8c31e156-7ef6-49b9-b037-ed3d90f31164)
-![Captura de pantalla 2024-05-09 154439](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/139101e4-7a25-42a0-8a9a-259550c20738)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/9b252a84-7d3a-4da3-80f0-04d7db4c0203)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/052980d6-e35b-4077-bc97-9b070de7877c)
+
 
 
 
