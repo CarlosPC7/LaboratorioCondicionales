@@ -50,10 +50,8 @@
 ## 5. Game over
 
 - Si el usuario se pasa de 7,5 puntos, el juego termina y se muestra un mensaje de Game Over, además el usuario no puede seguir pidiendo cartas.
-![Captura de pantalla 2024-05-09 154003](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/9bfe6f76-5de1-436a-a5af-7dfa3b03423c)
-![Captura de pantalla 2024-05-09 154011](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/27acd5f6-26d8-44df-bad2-d1ae236c799a)
-![Captura de pantalla 2024-05-09 154023](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/0e9b06ff-382b-4032-b2bf-00f980cf64dd)
-
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/9ded8016-ac6b-40a5-8f64-5996683cd4bc)
+![image](https://github.com/CarlosPC7/LaboratorioCondicionales/assets/156413536/bdcf6187-76db-4207-bca9-5cc4c30bc869)
 
 
 ## 6. Me planto
